@@ -88,23 +88,29 @@ void GAModel::FillGenePool( size_t num_models )
 	int i,j,k,z;
 
 	int model_set_size =  (int) mModelSet.size();
+	mGenePool.reserve(num_models);
 	if(  model_set_size == 0 )
 	{
 		for( i = (int) num_models; i > 0; --i )
 		{
+			std::cout << "Filling Gene Pool # " << i << std::endl;
 			DynSysModel m;
 
 			Polynomial p;
 			for( k = 1; k <= (int)GAParams::NumVars(); ++k )
 			{
 				p.GenerateRandomPolynomial( mMaxTerms );
+				std::cout << "Done Generating Random Polynomial" << std::endl;
 				m.SetFunction( k, p );
 			}
+			std::cout << "Fixing to push onto gene pool" << std::endl;
 			mGenePool.push_back( m );
+			std::cout << "Done filling Gene Pool # " << i << std::endl;
 		}
 	}
 	else
 	{
+		std::cout << "model_set_size: " << model_set_size << std::endl;
 		for( i = model_set_size; i > 0; --i )
 		{
 			mGenePool.push_back( mModelSet[i-1] );

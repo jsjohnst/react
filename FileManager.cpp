@@ -337,6 +337,7 @@ bool FileManager::ReadTimeSeries( String& file_path, TimeSeries& ts, size_t kov 
 		}
 	}
 	in_file.close();
+	std::cout << "FileManager::ReadTimeSeries - Finished reading input" << std::endl;
 	return true;
 }
 

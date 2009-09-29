@@ -4,35 +4,37 @@
 #
 #  primary target goes first
 #
-React: BitStringNew.o DynSysModel.o NTuple.o Monomial.o Polynomial.o GAParams.o FileManager.o GAModel.o React.o
-	g++ BitStringNew.o DynSysModel.o NTuple.o Monomial.o Polynomial.o GAParams.o FileManager.o GAModel.o React.o -O3 -o React
+CFLAGS=-O3 -c -I./
+
+React: DynSysModel.o NTuple.o Monomial.o Polynomial.o GAParams.o FileManager.o GAModel.o React.o
+	g++ DynSysModel.o NTuple.o Monomial.o Polynomial.o GAParams.o FileManager.o GAModel.o React.o -O3 -o React
 
 BitStringNew.o: BitString.cpp
-	gcc BitStringNew.cpp -O3 -c
+	gcc BitStringNew.cpp $(CFLAGS)
 
 DynSysModel.o: DynSysModel.cpp
-	gcc DynSysModel.cpp -O3 -c -g
+	gcc DynSysModel.cpp $(CFLAGS)
 
 NTuple.o: NTuple.cpp
-	gcc NTuple.cpp -O3 -c -g
+	gcc NTuple.cpp $(CFLAGS)
 
 Monomial.o: Monomial.cpp
-	gcc Monomial.cpp -O3 -c -g
+	gcc Monomial.cpp $(CFLAGS)
 
 Polynomial.o: Polynomial.cpp
-	gcc Polynomial.cpp -O3 -c -g
+	gcc Polynomial.cpp $(CFLAGS)
 
 GAParams.o: GAParams.cpp
-	gcc GAParams.cpp -O3 -c -g
+	gcc GAParams.cpp $(CFLAGS)
 
 FileManager.o: FileManager.cpp
-	gcc FileManager.cpp -O3 -c -g
+	gcc FileManager.cpp $(CFLAGS)
 
 GAModel.o: GAModel.cpp
-	gcc GAModel.cpp -O3 -c -g
+	gcc GAModel.cpp $(CFLAGS)
 
 React.o: React.cpp
-	gcc React.cpp -O3 -c -g
+	gcc React.cpp $(CFLAGS)
 
 
 clean:

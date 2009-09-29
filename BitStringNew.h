@@ -43,7 +43,7 @@ public:
 	}
 
 	// Return true if bit number i = 1 (can not be used for assignment)
-	bool operator[]( size_t i ) const;
+	const bool operator[]( size_t i ) const;
 
 	// Bitwise AND operator (Performs * in F_2^n)
 	BitString operator&( const BitString& other ) const;

@@ -56,13 +56,19 @@ public:
 	// Reset all bits of this tupple
 	inline void Reset()
 	{
-		mTuple.Reset();
+		mTuple.reset();
 	}
 
 	// Bitwise XOR operator
 	inline NTuple operator^( const NTuple& other ) const
 	{
 		return NTuple( mTuple ^ other.mTuple );
+	}
+	
+	// < operator
+	inline bool operator<( const NTuple& other ) const
+	{
+		return ( mTuple < other.mTuple );
 	}
 
 	// Equality test operator
@@ -75,29 +81,29 @@ public:
 	inline size_t Count( ) const
 	{
 		// TBD - could optimize this with larger count table
-		return mTuple.Count();
+		return mTuple.count();
 	}
 
 	// Return the number of variable in this nTuple
 	inline size_t Size() const
 	{
-		return mTuple.Size();
+		return mTuple.size();
 	}
 
 	// Set - set bit # b of this NTuple 1 <= b <= Size()
-	inline void Set( size_t b ) { mTuple.Set( b - 1 ); }
+	inline void Set( size_t b ) { mTuple.set( b - 1, 1 ); }
 
 	// Reset - reset bit # b of this NTuple  1 <= b <= Size()
-	inline void Reset( size_t b ) { mTuple.Reset( b - 1 ); }
+	inline void Reset( size_t b ) { mTuple.reset( b - 1 ); }
 
 	// Assign the value s to bit # b of this NTuple  1 <= b <= Size()
 	inline void Assign( size_t b, bool s )
 	{
-		s ? mTuple.Set( b - 1 ) : mTuple.Reset( b - 1 );
+		s ? mTuple.set( b - 1, 1 ) : mTuple.reset( b - 1 );
 	}
 
 	// Flip bit number 'b' of this NTuple  1 <= b <= Size()
-	inline void Flip( size_t b ) { mTuple.Flip( b - 1); }
+	inline void Flip( size_t b ) { mTuple.flip( b - 1); }
 
 	// Subtraction operator gives the Hamming distance
 	inline size_t operator-( const NTuple& other ) const

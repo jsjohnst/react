@@ -65,7 +65,7 @@ public:
 	// into an ordered container, in particular so that we
 	// can represent a polynomial as STL set<Monomial> of terms
 	// in canonical order.
-	friend bool operator<( const Monomial& a, const Monomial& b );
+	//friend bool operator<( const Monomial& a, const Monomial& b );
 
 	// Equality test operator for elimination of duplicates
 	bool operator==( const Monomial& other )
@@ -73,6 +73,20 @@ public:
 		if( mCoeff != other.mCoeff ) return false;
 
 		return ( mTerm == other.mTerm );
+	}
+	
+	// Equality test operator for elimination of duplicates
+	inline bool operator<( const Monomial& other )
+	{
+
+		return ( mTerm < other.mTerm );
+	}
+	
+	// Equality test operator for elimination of duplicates
+	friend bool operator<( const Monomial& a, const Monomial& b )
+	{
+
+		return ( a.mTerm < b.mTerm );
 	}
 
 

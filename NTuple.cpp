@@ -20,7 +20,7 @@ NTuple::NTuple( String bit_string )
 	{
 		if( *iter == '1' )
 		{
-			mTuple.Set(i);
+			mTuple.set(i, 1);
 		} 
 		// Ignore all but 0's and 1's
 		if( *iter == '1'|| *iter == '0' )
@@ -40,7 +40,7 @@ void NTuple::Randomize( )
 		// Flip a coin to set each bit
 		if( PolyMathRand::RandInt() % 2 )
 		{
-			mTuple.Set(i);
+			mTuple.set(i,1);
 		}
 	}
 }
@@ -65,7 +65,7 @@ size_t NTuple::HammingDistance( TimeSeries& t1, TimeSeries& t2 )
 std::ostream& operator<<( std::ostream& out, const NTuple& t )
 {
 	size_t j;  // Initialize a bit counter
-	for( j = 0; j < t.mTuple.Size(); )
+	for( j = 0; j < t.mTuple.size(); )
 	{
 		// Output the appropriate character 1 or 0
 		out << t.mTuple[j] ? '1' : '0';

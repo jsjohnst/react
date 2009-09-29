@@ -13,15 +13,15 @@
 void test_BitStringNew()
 {
 	BitString a(12);
-	a.Set(1);
-	a.Set(3);
-	a.Set(7);
+	a.set(1);
+	a.set(3);
+	a.set(7);
 	std::cout << "a =       " << a << std::endl;
 
 	BitString b(12);
-	b.Set(1);
-	b.Set(4);
-	b.Set(6);
+	b.set(1);
+	b.set(4);
+	b.set(6);
 	std::cout << "b =       " << b << std::endl;
 
 	std::cout << "a AND B = " << (a & b) << std::endl;
@@ -123,13 +123,13 @@ void test_BitString()
 		BitString x(30);
 		BitString y(30);
 
-		x.Set(3);
-		x.Set(7);
-		x.Set(14);
+		x.set(3);
+		x.set(7);
+		x.set(14);
 
-		y.Set(3);
-		y.Set(5);
-		y.Set(12);
+		y.set(3);
+		y.set(5);
+		y.set(12);
 
 	// Test out of bounds bit number handling
 	//	y.Set(32);
@@ -154,7 +154,7 @@ void test_BitString()
 
 
 	// Test bit-wise Count
-		size_t c = z.Count();
+		size_t c = z.count();
 
 		std::cout << "Count X | Y = " << (int) c << std::endl;
 

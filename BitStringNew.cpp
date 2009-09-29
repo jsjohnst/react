@@ -38,7 +38,7 @@ size_t BitCount( ULONG x )
 }
 
 // Return true if bit number b = 1 (can not be used for assignment)
-bool BitString::operator[]( size_t b ) const
+const bool BitString::operator[]( size_t b ) const
 {
 	// Ensure that index is valid
 	if( b >= mN ) throw( "BitString::operator[] - index out of bounds ");

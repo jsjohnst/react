@@ -52,8 +52,11 @@ typedef unsigned int ULONG;
 #define MAX_VARIABLES 8
 #define MAX_TERMS     80
 
-// typedef std::bitset<MAX_VARIABLES> TermType;
-// typedef std::bitset<MAX_VARIABLES> TupleType;
+#include "boost/dynamic_bitset.hpp"
+
+typedef boost::dynamic_bitset<> TermType;
+typedef boost::dynamic_bitset<> BitString;
+typedef boost::dynamic_bitset<> TupleType;
 
 typedef std::vector<unsigned short> UShortTable;
 typedef std::vector<unsigned short>::iterator UShortTableIter;
@@ -98,10 +101,10 @@ typedef StringVector::iterator StringVectorIter;
 
 #include "PolyMathRand.h"
 
-#include "BitStringNew.h"
+//#include "BitStringNew.h"
 
-typedef BitString TermType;
-typedef BitString TupleType;
+//typedef BitString TermType;
+//typedef BitString TupleType;
 
 #include "PolyMathRand.h"
 #include "GAParams.h"
