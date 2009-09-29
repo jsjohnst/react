@@ -13,6 +13,7 @@
 NTuple::NTuple( String bit_string )
 	: mTuple( GAParams::NumVars() )
 {
+//	std::cout << bit_string << std::endl;
 	size_t i = 0;
 	String::const_iterator iter = bit_string.begin();
 	while( iter != bit_string.end( ) )
@@ -20,7 +21,7 @@ NTuple::NTuple( String bit_string )
 		if( *iter == '1' )
 		{
 			mTuple.Set(i);
-		}
+		} 
 		// Ignore all but 0's and 1's
 		if( *iter == '1'|| *iter == '0' )
 		{

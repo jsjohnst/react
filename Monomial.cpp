@@ -58,7 +58,7 @@ String Monomial::ToString( bool with_star ) const
 					s += "*";
 				}
 				// Construct the variable name "x9999"
-				sprintf( buf, "x%d", i );
+				sprintf( buf, "x%zd", i );
 
 				// append this variable name to the string 's'
 				s += buf;

@@ -461,12 +461,12 @@ int main( int num_args, char* cmd_line_args[] )
 	try
 	{
 		String control_file_path = "GaControlFile.txt";
-		char *best_models_filename = "BestModels.txt";
+		char *best_models_filename = (char*) "BestModels.txt";
         if (num_args < 2)
         {
             std::cout << "Use React with the parameters:" << std::endl;
             std::cout << "./React controlfilepath (usually fileman.txt) outputfilename" << std::endl; 
-            return 1;
+            return 0;
         }
 		if( num_args >= 2 )
 		{
@@ -489,12 +489,10 @@ int main( int num_args, char* cmd_line_args[] )
 	catch( const char* msg )
 	{
 		std::cout << msg << std::endl;
-		return 2;
 	}
 	catch( const String& msg )
 	{
 		std::cout << msg << std::endl;
-		return 3;
 	}
 
 	// All ok

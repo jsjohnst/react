@@ -29,24 +29,24 @@ typedef ParamMap::iterator ParamMapIter;
 //	the parameter, the second is the default value for that parameter
 static NameValuePair param_list[] =
 {
-	{ "GenePoolSize",			 4000.00 },
-	{ "NumCandidates",			  100.00 },
-	{ "NumParentsToPreserve",	   10.00 },
-	{ "MaxGenerations",			15000.00 },
-	{ "StableGenerationLimit",	  300.00 },
-	{ "MutateProbability",		    0.75 },
+	{ (char*) "GenePoolSize",			 4000.00 },
+	{ (char*) "NumCandidates",			  100.00 },
+	{ (char*) "NumParentsToPreserve",	   10.00 },
+	{ (char*) "MaxGenerations",			15000.00 },
+	{ (char*) "StableGenerationLimit",	  300.00 },
+	{ (char*) "MutateProbability",		    0.75 },
 
 	// The following set of polynomial scoring weights must sum to 1.0
-	{ "HammingPolyWeight",		    0.25 },
-	{ "ComplexityWeight",		    0.25 },
-	{ "RevEngWeight",			    0.25 },
-	{ "DepGraphWeight",				0.00 },
-	{ "BioProbWeight",			    0.25 },
+	{ (char*) "HammingPolyWeight",		    0.25 },
+	{ (char*) "ComplexityWeight",		    0.25 },
+	{ (char*) "RevEngWeight",			    0.25 },
+	{ (char*) "DepGraphWeight",				0.00 },
+	{ (char*) "BioProbWeight",			    0.25 },
 	// End of sum
 
 	// The following set of model scoring weights must sum to 1.0
-	{ "HammingModelWeight",			0.3 },
-	{ "PolyScoreWeight",		    0.7 },
+	{ (char*) "HammingModelWeight",			0.3 },
+	{ (char*) "PolyScoreWeight",		    0.7 },
 };
 
 // Class to manage and store

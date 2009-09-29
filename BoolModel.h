@@ -13,7 +13,7 @@
 #include <cmath>
 
 typedef unsigned short USHORT;
-typedef unsigned long ULONG;
+typedef unsigned int ULONG;
 
 // Standard Template Library Containers
 //  dynamically sized array, fast random access, no insertion/deletion
@@ -98,7 +98,7 @@ typedef StringVector::iterator StringVectorIter;
 
 #include "PolyMathRand.h"
 
-#include "BitString.h"
+#include "BitStringNew.h"
 
 typedef BitString TermType;
 typedef BitString TupleType;

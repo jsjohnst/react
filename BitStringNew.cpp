@@ -153,7 +153,10 @@ void BitString::Set( size_t b )
 	USHORT k = (USHORT)(b / BitsPerWord);
 
 	// m is a single bit mask for the selected  bit within that word
-	ULONG m = 1 << (b % BitsPerWord);
+	ULONG m = ((ULONG) 1) << (b % BitsPerWord);
+//	std::cout << "b: " << b << std::endl;
+//	std::cout << "k: " << k << std::endl;
+//	std::cout << "m: " << m << std::endl;
 
 	// Set the selected bit using a bitwise OR with the single bit mask
 	mWords[k] |= m;
