@@ -1,0 +1,23 @@
+GenePoolSize                    100.00 
+  
+NumCandidates                    55.00  
+ 
+mNumParentsToPreserve            5.00  
+ 
+MaxGenerations                   100.00   
+
+StableGenerationLimit            355.00   
+
+MutateProbability                0.755   
+
+HammingPolyWeight                0.30  
+ 
+ComplexityWeight                 0.20  
+ 
+RevEngWeight                     0.0
+ 
+BioProbWeight                    0.0  
+ 
+HammingModelWeight               0.35  
+ 
+PolyScoreWeight                  0.65   

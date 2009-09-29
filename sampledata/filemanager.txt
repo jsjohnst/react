@@ -1,0 +1,9 @@
+P=2; 
+N=8;
+WT = {"w1.txt","w2.txt"};
+KO = {};
+REV = {};
+CMPLX = {};
+BIO = {};
+MODEL = {};
+PARAMS = {"params.txt"};

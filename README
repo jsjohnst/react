@@ -1,0 +1,12 @@
+To compile, do the standard `make` routine
+
+To run, the program expects two input parameters.
+The first param is the filemanager.txt file which
+describes the job to run. The second param is the
+output file to write the results into.
+
+Examples of a dataset and control files are inside
+the sampledata/ directory. To start React using that
+data, simply use the following command line:
+
+../React filemanager.txt output.txt
